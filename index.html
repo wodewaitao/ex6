@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	
+        #container {
+            position: relative;
+            width: 600px;
+            height: 452px;
+            border: 3px solid seagreen;
+            overflow: hidden;
+			margin:100px 400px;
+        }
+        #list {
+            position: absolute;
+            z-index: 1;
+            width: 600px;
+            height: 452px;
+        }
+        #list img {
+            display: block;
+            width: 600px;
+            height: 452px;
+        }
+		a:link {
+			  		color:blue;
+			  		text-decoration:underline;
+					}
+			
+					a:visited {
+			  		color:grey;
+			  		text-decoration:none;
+					}
+			
+					a:hover {
+			  		color:black;
+			  		text-decoration:none;
+					}
+			
+					a:active {
+			  		color: white;
+			  		text-decoration:none;
+					}
+					.center{
+						margin-top:30px;
+						margin-left: 30px;
+						font-size: 20px;
+						
+					}
+		
+				
+	</style>
+</head>
+<body>
+	<body background="res/bg.jpg" ></body>
+	
+	<div id="container">
+	
+        <div id="list" style="left:0px;">
+            <img src="res/p1.jpg" />
+            <img src="res/p2.jpg" />
+            <img src="res/p3.jpg" />
+            <img src="res/p4.jpg" />
+            <img src="res/p5.jpg" />
+			 </div>
+	</div>
+	<div class="center">
+	 <a href="https://wodewaitao.github.io/ex5/index.html" target="_blank">返回</a>
+	</div>
+	
+
+	<script>
+        $(document).ready(function(){
+            function moveAgain(){
+                if($("#list").css("top") == "0px"){
+                    $("#list").animate({
+                        top:'-=2208px'
+                    },6000,moveAgain);
+                }else{
+                    $("#list").animate({
+                        top:'+=2208px'
+                    },6000,moveAgain);
+                }
+            }
+            moveAgain();
+        })
+	</script>
+</body>
+</html>
